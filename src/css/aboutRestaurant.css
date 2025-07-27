@@ -1,0 +1,16 @@
+/* @import "tailwindcss"; */
+@layer components {
+  .btn-fade-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: white;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in-out;
+    z-index: 0;
+  }
+
+  .btn-fade-bg:hover::before {
+    transform: translateX(0%);
+  }
+}
